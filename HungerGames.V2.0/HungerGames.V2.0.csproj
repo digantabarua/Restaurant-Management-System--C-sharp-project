@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2EAC0060-7A64-4850-A793-ABC929DB76B9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>HungerGames.V2._0</RootNamespace>
+    <AssemblyName>HungerGames.V2.0</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Business Logic Layer\AdminService.cs" />
+    <Compile Include="Business Logic Layer\EmployeeService.cs" />
+    <Compile Include="Business Logic Layer\MenuService.cs" />
+    <Compile Include="Business Logic Layer\OrderService.cs" />
+    <Compile Include="Business Logic Layer\StorageService.cs" />
+    <Compile Include="DataAccessLayer\AdminDataAccess.cs" />
+    <Compile Include="DataAccessLayer\DataAccess.cs" />
+    <Compile Include="DataAccessLayer\EmployeeDataAccess.cs" />
+    <Compile Include="DataAccessLayer\Entities\Admin.cs" />
+    <Compile Include="DataAccessLayer\Entities\Employee.cs" />
+    <Compile Include="DataAccessLayer\Entities\Menus.cs" />
+    <Compile Include="DataAccessLayer\Entities\Order.cs" />
+    <Compile Include="DataAccessLayer\Entities\Storage.cs" />
+    <Compile Include="DataAccessLayer\Entities\Varriables.cs" />
+    <Compile Include="DataAccessLayer\MenuDataAccess.cs" />
+    <Compile Include="DataAccessLayer\OrderDataAccess.cs" />
+    <Compile Include="DataAccessLayer\StorageDataAccess.cs" />
+    <Compile Include="Presentation Layer\Admin_Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\Admin_Dashboard.Designer.cs">
+      <DependentUpon>Admin_Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\EmployeeEdit_Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\EmployeeEdit_Dashboard.Designer.cs">
+      <DependentUpon>EmployeeEdit_Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\Employee_Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\Employee_Dashboard.Designer.cs">
+      <DependentUpon>Employee_Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\Manager_Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\Manager_Dashboard.Designer.cs">
+      <DependentUpon>Manager_Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\Manager_Information.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\Manager_Information.Designer.cs">
+      <DependentUpon>Manager_Information.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\Manager_Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\Manager_Menu.Designer.cs">
+      <DependentUpon>Manager_Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\Manager_Storage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\Manager_Storage.Designer.cs">
+      <DependentUpon>Manager_Storage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\Menu_Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\Menu_Dashboard.Designer.cs">
+      <DependentUpon>Menu_Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\OrderHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\OrderHistory.Designer.cs">
+      <DependentUpon>OrderHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\Order_Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\Order_Dashboard.Designer.cs">
+      <DependentUpon>Order_Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\Storage_Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\Storage_Dashboard.Designer.cs">
+      <DependentUpon>Storage_Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\Waiter Information.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\Waiter Information.Designer.cs">
+      <DependentUpon>Waiter Information.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\WaiterMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\WaiterMenu.Designer.cs">
+      <DependentUpon>WaiterMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\WaiterStorage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\WaiterStorage.Designer.cs">
+      <DependentUpon>WaiterStorage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Presentation Layer\Admin_Dashboard.resx">
+      <DependentUpon>Admin_Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\EmployeeEdit_Dashboard.resx">
+      <DependentUpon>EmployeeEdit_Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\Employee_Dashboard.resx">
+      <DependentUpon>Employee_Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\Manager_Dashboard.resx">
+      <DependentUpon>Manager_Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\Manager_Information.resx">
+      <DependentUpon>Manager_Information.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\Manager_Menu.resx">
+      <DependentUpon>Manager_Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\Manager_Storage.resx">
+      <DependentUpon>Manager_Storage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\Menu_Dashboard.resx">
+      <DependentUpon>Menu_Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\OrderHistory.resx">
+      <DependentUpon>OrderHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\Order_Dashboard.resx">
+      <DependentUpon>Order_Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\Storage_Dashboard.resx">
+      <DependentUpon>Storage_Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\Waiter Information.resx">
+      <DependentUpon>Waiter Information.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\WaiterMenu.resx">
+      <DependentUpon>WaiterMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\WaiterStorage.resx">
+      <DependentUpon>WaiterStorage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
